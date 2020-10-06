@@ -1,0 +1,5 @@
+com\example\springboot\Person.class
+com\example\springboot\LoadDatabase.class
+com\example\springboot\PersonRepository.class
+com\example\springboot\Application.class
+com\example\springboot\HelloController.class
