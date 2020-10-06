@@ -37,7 +37,7 @@
         <maven-failsafe-plugin.version>2.21.0</maven-failsafe-plugin.version>
         <image.name>${project.artifactId}:${dubbo.version}</image.name>
         <java-image.name>openjdk:8</java-image.name>
-        <dubbo.port>20880</dubbo.port>
+        <dubbo.port>7889</dubbo.port>
         <zookeeper.port>2181</zookeeper.port>
         <main-class>org.apache.dubbo.samples.provider.Application</main-class>
     </properties>

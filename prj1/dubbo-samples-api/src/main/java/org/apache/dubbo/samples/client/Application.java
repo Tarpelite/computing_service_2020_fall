@@ -30,7 +30,7 @@ public class Application {
     public static void main(String[] args) {
         ReferenceConfig<MyRPCService> reference = new ReferenceConfig<>();
         reference.setApplication(new ApplicationConfig("first-dubbo-consumer"));
-        reference.setRegistry(new RegistryConfig("None"));
+        reference.setRegistry(new RegistryConfig("N/A"));
         reference.setInterface(MyRPCService.class);
         MyRPCService service = reference.get();
         // do Test
