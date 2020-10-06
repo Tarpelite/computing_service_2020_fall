@@ -28,11 +28,11 @@ public class Application {
     // private static String zookeeperHost = System.getProperty("zookeeper.address", "127.0.0.1"); no use zookeeper
 
     public static void main(String[] args) {
-        ReferenceConfig<GreetingsService> reference = new ReferenceConfig<>();
+        ReferenceConfig<MyRPCService> reference = new ReferenceConfig<>();
         reference.setApplication(new ApplicationConfig("first-dubbo-consumer"));
         reference.setRegistry(new RegistryConfig("None"));
         reference.setInterface(MyRPCService.class);
-        MyRPC service = reference.get();
+        MyRPCService service = reference.get();
         // do Test
         String message = service.setName("Tom");
         System.out.println(message);
