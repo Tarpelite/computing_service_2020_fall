@@ -40,19 +40,19 @@ public class Application {
         String name = service.getName();
         System.out.println(name);
 
-        String message = service.setAge(22);
-        System.out.println(message);
+        String age_message = service.setAge(22);
+        System.out.println(age_message);
 
         int res = service.getAge();
         System.out.println("The age of " + name + " is " + Integer.toString(res));
 
-        String message = service.setGender(false);
-        System.out.println(message);
+        String gender_message = service.setGender(false);
+        System.out.println(gender_message);
 
         boolean gender = service.getGender();
         System.out.println(name + "is a girl? " + Boolean.toString(gender));
 
-        String message = service.sayHello();
-        System.out.println(message);
+        String hello_message = service.sayHello();
+        System.out.println(hello_message);
     }
 }
