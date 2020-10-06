@@ -26,12 +26,13 @@ import org.apache.dubbo.samples.api.MyRPCService;
 import java.util.concurrent.CountDownLatch;
 
 public class Application {
-    // private static String zookeeperHost = System.getProperty("zookeeper.address", "127.0.0.1"); no use for this work
+    private static String zookeeperHost = System.getProperty("zookeeper.address", "127.0.0.1"); 
 
     public static void main(String[] args) throws Exception {
         ServiceConfig<MyRPCService> service = new ServiceConfig<>();
         service.setApplication(new ApplicationConfig("first-dubbo-provider"));
-        service.setRegistry(new RegistryConfig("N/A"));
+        service.setRegistry(new RegistryConfig("zookeeper://" + zookeeperHost + ":2181"));
+        // service.setRegistry(new RegistryConfig("N/A"));
         service.setInterface(MyRPCService.class);
         service.setRef(new MyRPCServiceImpl());
         service.export();

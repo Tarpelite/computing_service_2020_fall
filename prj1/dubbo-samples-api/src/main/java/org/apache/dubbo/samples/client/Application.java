@@ -25,14 +25,16 @@ import org.apache.dubbo.samples.api.MyRPCService;
 
 
 public class Application {
-    // private static String zookeeperHost = System.getProperty("zookeeper.address", "127.0.0.1"); no use zookeeper
+    private static String zookeeperHost = System.getProperty("zookeeper.address", "127.0.0.1"); 
 
     public static void main(String[] args) {
         ReferenceConfig<MyRPCService> reference = new ReferenceConfig<>();
         reference.setApplication(new ApplicationConfig("first-dubbo-consumer"));
-        reference.setRegistry(new RegistryConfig("N/A"));
+        // reference.setRegistry(new RegistryConfig("N/A"));
+        reference.setRegistry(new RegistryConfig("zookeeper://" + zookeeperHost + ":2181"));
         reference.setInterface(MyRPCService.class);
         MyRPCService service = reference.get();
+
         // do Test
         String message = service.setName("Tom");
         System.out.println(message);
