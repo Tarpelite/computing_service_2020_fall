@@ -23,7 +23,7 @@ public interface MyRPCService {
     String getName();
     String setAge(int age);
     int getAge();
-    Boolean setGender(Boolean x); // false for man and true for woman
-    Boolean getGender();
+    String setGender(boolean gender); // false for man and true for woman
+    boolean getGender();
     String sayHello();
 }

@@ -50,7 +50,7 @@ public class Application {
         System.out.println(gender_message);
 
         boolean gender = service.getGender();
-        System.out.println(name + "is a girl? " + Boolean.toString(gender));
+        System.out.println(name + "is a girl? " + String.valueOf(gender));
 
         String hello_message = service.sayHello();
         System.out.println(hello_message);
