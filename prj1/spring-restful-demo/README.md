@@ -13,3 +13,5 @@ The service will start on localhost:8080
 
 The [Postman](https://www.postman.com/downloads/)  software is recommended for APIs Tests.
 
+The results can be seen under the spring-restful-demo/results folder.
+
