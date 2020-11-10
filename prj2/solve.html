@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>作业2： 服务QoS预测</title>
+        <style>
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="作业2-服务qos预测">作业2： 服务QoS预测</h1>
+<p>访问 WS-DREAM(<a href="https://github.com/wsdream/WS-DREAM">https://github.com/wsdream/WS-DREAM</a>)，使用至少五种方法进行 QoS 预测并说明每种方法的原理。</p>
+<h2 id="数据">数据</h2>
+<p>使用WS-DREAM中的dataset2进行试验，因为相比dataset1，数据格式更加整齐，数据也更多。</p>
+<h2 id="方法">方法</h2>
+<ol>
+<li>
+<p>Umean</p>
+<p>使用同一个用户的所有其他服务的QoS值来预测当前目标服务的QoS值</p>
+</li>
+<li>
+<p>Smean</p>
+<p>使用同一种服务的所有其他用户的Qos值来预测当前用户对于该服务的QoS值</p>
+</li>
+<li>
+<p>User-based collaborative filtering
+对于所有用户使用各种计算的历史记录构造 $ n*m $ 特征矩阵</p>
+</li>
+<li>
+<p>Service-based collaborative filtering</p>
+</li>
+<li>
+<p>Hybrid collaborative filtering</p>
+</li>
+</ol>
+
+    </body>
+    </html>
